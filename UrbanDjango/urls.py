@@ -17,11 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from task2.views import class_view, func_view, main_view
+from task3.views import main_page, shop_page, bin_page
 from django.views.generic import TemplateView
+
+# urlpatterns = [
+#     path( 'admin/', admin.site.urls ),
+#     path( '', main_view.as_view() ),
+#     path( 'func/', func_view ),
+#     path( 'class/', class_view )
+# ]
 
 urlpatterns = [
     path( 'admin/', admin.site.urls ),
-    path( '', main_view.as_view() ),
-    path( 'func/', func_view ),
-    path( 'class/', class_view )
+    path( '', main_page ),
+    path( 'shop/', shop_page ),
+    path( 'bin/', bin_page ),
 ]
